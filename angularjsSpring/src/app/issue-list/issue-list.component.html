@@ -3,7 +3,7 @@
     <h2 class="display-2 my-3">My issues</h2>
     <p><a class="btn btn-primary" routerLink="/issues/new"  role="button">New issue</a></p>
     <div class="list-group">
-      <a *ngFor="let issue of Issues"   routerLink="/issues/1" class="list-group-item list-group-item-action"
+      <a *ngFor="let issue of issues"   [routerLink]="['/issues',issue.id]" class="list-group-item list-group-item-action"
       [class.list-group-item-danger]="issue.status==='NEW'"
       [class.list-group-item-warning]="issue.status==='DOING'"
       [class.list-group-item-success]="issue.status==='DONE'">

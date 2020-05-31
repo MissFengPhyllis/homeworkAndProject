@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Issue } from '../issue';
+import {IssueService} from '../issue.service';
 
 @Component({
   selector: 'app-issue-list',
@@ -7,15 +8,16 @@ import { Issue } from '../issue';
   styleUrls: ['./issue-list.component.css']
 })
 export class IssueListComponent implements OnInit {
-  Issues: Issue[] = [
-    {id:1, title:'issue1', description:'description1', place: 'place1',status:'NEW'},
-    {id:2, title:'issue2', description:'description2', place: 'place2',status:'DONE'},
-    {id:3, title:'issue3', description:'description3', place: 'place3',status:'DOING'},
-    {id:4, title:'issue4', description:'description4', place: 'place4',status:'NEW'},
-  ];
-  constructor() { }
+  issues: Issue[] = [];
+  //要想引用issueServices必须要在这里先引入
+  constructor( private issueService: IssueService) {
+   
+   }
 
-  ngOnInit(): void {
+  async ngOnInit(){
+    this.issues = await this.issueService.getIssues();
+
+    console.log(this.issues)
   }
 
 }
