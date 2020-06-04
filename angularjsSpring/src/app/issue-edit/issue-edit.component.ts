@@ -33,10 +33,10 @@ export class IssueEditComponent implements OnInit {
  async handleSave(formData){
     if(this.id){
       await this.issueService.updateIssue(this.id,formData);
-    this.location.back();
+      this.location.back();
     }else{
      await this.issueService.addIssue(formData);
-      this.router.navigate(['issues']);
+      this.router.navigate(['budgets']);
     }
     
   }

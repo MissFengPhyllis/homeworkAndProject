@@ -13,15 +13,15 @@ export class IssueFormComponent implements OnInit,OnChanges {
 
   issueForm = this.fb.group({
     title: [''],
-    description: [''],
-    place: [''],
-    status: ['NEW'],
+    income: 0,
+    outcome: 0,
+    category: [''],
   });
 
   get title() { return this.issueForm.get('title'); }
-  get description() { return this.issueForm.get('description'); }
-  get place() { return this.issueForm.get('place'); }
-  get status() { return this.issueForm.get('status'); }
+  get income() { return this.issueForm.get('income'); }
+  get outcome() { return this.issueForm.get('outcome'); }
+  get category() { return this.issueForm.get('category'); }
 
   constructor(private fb: FormBuilder
     ) { }

@@ -24,7 +24,7 @@ export class IssueService {
 // ];
 private issues :Issue[];
 
-private issueUrl = '/api/issues';
+private issueUrl = '/api/budgets';
 
   constructor(
     private http: HttpClient
@@ -41,6 +41,8 @@ private issueUrl = '/api/issues';
   }
 
   updateIssue(id:number,data){
+    console.log(id,data);
+    // return this.http.put<Issue>(`http://localhost:8080/api/budgets/${id}`,data, httpOptions).toPromise();
     return this.http.put<Issue>(`${this.issueUrl}/${id}`,data, httpOptions).toPromise();
     // const issue = this.getOneIssue(id);
     // Object.assign(issue,data);

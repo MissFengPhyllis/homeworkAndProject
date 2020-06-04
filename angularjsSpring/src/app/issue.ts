@@ -1,7 +1,10 @@
 export class Issue {
-    id: Number;
+    id: number;
     title = '';
     description = '';
+    income:number;
+    outcome:number;
+    category:'';
     place = '';
     status = '';
 }

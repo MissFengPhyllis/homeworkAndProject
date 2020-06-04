@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { IssueListComponent } from './issue-list/issue-list.component';
 import { IssueEditComponent } from './issue-edit/issue-edit.component';
 import { IssueDetailComponent } from './issue-detail/issue-detail.component';
+import { BudgetAboutComponent } from './budget-about/budget-about.component';
 
 
 const routes: Routes = [
@@ -12,21 +13,25 @@ const routes: Routes = [
     component: MainPageComponent
   },
   {
-    path: 'issues',
+    path: 'budgets',
     component: IssueListComponent
   },
   {
-    path: 'issues/new',
+    path: 'budgets/new',
     component: IssueEditComponent
   },
   {
-    path: 'issues/:id',
+    path: 'budgets/:id',
     component: IssueDetailComponent
   },
   {
-    path: 'issues/:id/edit',
+    path: 'budgets/:id/edit',
     component: IssueEditComponent
   },
+  {
+    path: 'about',
+    component: BudgetAboutComponent
+  }
 ];
 
 @NgModule({

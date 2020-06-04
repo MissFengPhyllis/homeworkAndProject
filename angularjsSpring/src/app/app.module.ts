@@ -11,6 +11,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { IssueDetailComponent } from './issue-detail/issue-detail.component';
 import { IssueFormComponent } from './issue-form/issue-form.component';
 import { IssueEditComponent } from './issue-edit/issue-edit.component';
+import { BudgetAboutComponent } from './budget-about/budget-about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IssueEditComponent } from './issue-edit/issue-edit.component';
     MainPageComponent,
     IssueDetailComponent,
     IssueFormComponent,
-    IssueEditComponent
+    IssueEditComponent,
+    BudgetAboutComponent
   ],
   imports: [
     NgbModule,
