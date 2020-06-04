@@ -9,7 +9,7 @@ create table user
 		primary key (id)
 );
 
-create table issue
+create table budget
 (
 	id int auto_increment,
 	user_id varchar2,
@@ -22,14 +22,14 @@ create table issue
 	status varchar,
 	created_at timestamp,
 	updated_at timestamp,
-	constraint issue_pk
+	constraint budget_pk
 		primary key (id)
 );
 
 create table message
 (
 	id int auto_increment,
-	issue_id varchar2,
+	budget_id varchar2,
 	text varchar2,
 	created_at timestamp,
 	updated_at timestamp,
@@ -47,12 +47,12 @@ create table label
 		primary key (id)
 );
 
-create table issue_labels
+create table budget_labels
 (
 	id int auto_increment,
-	issues_id varchar2,
+	budgets_id varchar2,
 	labels_id varchar2,
-	constraint issue_labels_pk
+	constraint budget_labels_pk
 		primary key (id)
 );
 

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hu.elte</groupId>
-    <artifactId>IssueTracker</artifactId>
+    <artifactId>FamilyBudget</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>IssueTracker</name>
+    <name>FamilyBudget</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

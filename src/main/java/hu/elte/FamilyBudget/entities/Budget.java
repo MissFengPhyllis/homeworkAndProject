@@ -1,4 +1,4 @@
-package hu.elte.IssueTracker.entities;
+package hu.elte.FamilyBudget.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -30,7 +30,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Issue {
+public class Budget {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,7 +65,7 @@ public class Issue {
     private LocalDateTime updated_at;
 
 }
-//public class Issue {
+//public class Budget {
 //
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -114,7 +114,7 @@ public class Issue {
 //    @UpdateTimestamp
 //    private LocalDateTime updated_at;
 //
-//    @OneToMany(mappedBy = "issue", cascade = CascadeType.REMOVE)
+//    @OneToMany(mappedBy = "budget", cascade = CascadeType.REMOVE)
 //    private List<Message> messages;
 //
 //    @ManyToMany
