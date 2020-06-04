@@ -1,7 +1,7 @@
 <!-- new form page -->
 <div>
 
-  <form [formGroup]="issueForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
   
     <div class="form-group">
       <label for="title">Title</label>
@@ -41,7 +41,7 @@
         </div>
     </div>
   
-    <button type="submit" class="btn btn-primary" [disabled]="issueForm.invalid">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="budgetForm.invalid">Submit</button>
   
   </form>
   </div>

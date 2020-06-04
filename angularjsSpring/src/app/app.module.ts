@@ -6,21 +6,21 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IssueListComponent } from './issue-list/issue-list.component';
+import { BudgetListComponent } from './budget-list/budget-list.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { IssueDetailComponent } from './issue-detail/issue-detail.component';
-import { IssueFormComponent } from './issue-form/issue-form.component';
-import { IssueEditComponent } from './issue-edit/issue-edit.component';
+import { BudgetDetailComponent } from './budget-detail/budget-detail.component';
+import { BudgetFormComponent } from './budget-form/budget-form.component';
+import { BudgetEditComponent } from './budget-edit/budget-edit.component';
 import { BudgetAboutComponent } from './budget-about/budget-about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IssueListComponent,
+    BudgetListComponent,
     MainPageComponent,
-    IssueDetailComponent,
-    IssueFormComponent,
-    IssueEditComponent,
+    BudgetDetailComponent,
+    BudgetFormComponent,
+    BudgetEditComponent,
     BudgetAboutComponent
   ],
   imports: [

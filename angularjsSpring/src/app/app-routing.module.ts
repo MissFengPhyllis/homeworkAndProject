@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
-import { IssueListComponent } from './issue-list/issue-list.component';
-import { IssueEditComponent } from './issue-edit/issue-edit.component';
-import { IssueDetailComponent } from './issue-detail/issue-detail.component';
+import { BudgetListComponent } from './budget-list/budget-list.component';
+import { BudgetEditComponent } from './budget-edit/budget-edit.component';
+import { BudgetDetailComponent } from './budget-detail/budget-detail.component';
 import { BudgetAboutComponent } from './budget-about/budget-about.component';
 
 
@@ -14,19 +14,19 @@ const routes: Routes = [
   },
   {
     path: 'budgets',
-    component: IssueListComponent
+    component: BudgetListComponent
   },
   {
     path: 'budgets/new',
-    component: IssueEditComponent
+    component: BudgetEditComponent
   },
   {
     path: 'budgets/:id',
-    component: IssueDetailComponent
+    component: BudgetDetailComponent
   },
   {
     path: 'budgets/:id/edit',
-    component: IssueEditComponent
+    component: BudgetEditComponent
   },
   {
     path: 'about',

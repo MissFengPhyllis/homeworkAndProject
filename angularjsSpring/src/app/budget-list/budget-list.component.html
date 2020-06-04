@@ -3,15 +3,15 @@
     <h2 class="display-2 my-3">My budget</h2>
     <p><a class="btn btn-primary" routerLink="/budgets/new"  role="button">New budget</a></p>
     <div class="list-group">
-      <a *ngFor="let issue of issues"   [routerLink]="['/budgets',issue.id]" class="list-group-item list-group-item-action ">
+      <a *ngFor="let budget of budgets"   [routerLink]="['/budgets',budget.id]" class="list-group-item list-group-item-action ">
         <div class="d-flex w-100 justify-content-between align-items-center">
-          <h5 class="mb-1">{{issue.title}}</h5>
+          <h5 class="mb-1">{{budget.title}}</h5>
           <span class="badge badge-primary">
-            Category: {{issue.category}} </span>
+            Category: {{budget.category}} </span>
         </div>
         <p class="mb-1">
-          <span class="badge badge-success">Income: {{issue.income}}</span>
-          <span class="badge badge-warning">Outcome: {{issue.outcome}}</span>
+          <span class="badge badge-success">Income: {{budget.income}}</span>
+          <span class="badge badge-warning">Outcome: {{budget.outcome}}</span>
         </p>
         <small>
           <i class="fas fa-calendar-alt"></i> 2019.01.01.

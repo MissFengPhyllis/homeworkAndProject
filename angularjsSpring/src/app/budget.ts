@@ -1,4 +1,4 @@
-export class Issue {
+export class Budget {
     id: number;
     title = '';
     description = '';

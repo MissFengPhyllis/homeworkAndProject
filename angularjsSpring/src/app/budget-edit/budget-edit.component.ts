@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Issue } from '../issue';
-import { IssueService } from '../issue.service';
+import { Budget } from '../budget';
+import { BudgetService } from '../budget.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-issue-edit',
-  templateUrl: './issue-edit.component.html',
-  styleUrls: ['./issue-edit.component.css']
+  selector: 'app-budget-edit',
+  templateUrl: './budget-edit.component.html',
+  styleUrls: ['./budget-edit.component.css']
 })
-export class IssueEditComponent implements OnInit {
+export class BudgetEditComponent implements OnInit {
 
-  issue: Issue = new Issue();
+  budget: Budget = new Budget();
   id :number = null;
   constructor(
-    private issueService:IssueService,
+    private budgetService:BudgetService,
     private route : ActivatedRoute,
     private location: Location,
     private router: Router
@@ -25,17 +25,17 @@ export class IssueEditComponent implements OnInit {
     console.log(id);
     if(id){
       this.id = +id; 
-      this.issue = await this.issueService.getOneIssue(this.id);
+      this.budget = await this.budgetService.getOneBudget(this.id);
     }
     
   }
 
  async handleSave(formData){
     if(this.id){
-      await this.issueService.updateIssue(this.id,formData);
+      await this.budgetService.updateBudget(this.id,formData);
       this.location.back();
     }else{
-     await this.issueService.addIssue(formData);
+     await this.budgetService.addBudget(formData);
       this.router.navigate(['budgets']);
     }
     

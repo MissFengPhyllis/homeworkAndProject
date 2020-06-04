@@ -1,18 +1,18 @@
-<!-- issue page -->
+<!-- budget page -->
 <div>
     <h2 class="display-2 my-3">Details</h2>
   <dl class="row">
     <dt class="col-sm-3">Title</dt>
-    <dd class="col-sm-9">{{issue.title}}</dd>
+    <dd class="col-sm-9">{{budget.title}}</dd>
 
     <dt class="col-sm-3">Category</dt>
-    <dd class="col-sm-9"><span class="badge badge-danger">{{issue.category}}</span></dd>
+    <dd class="col-sm-9"><span class="badge badge-danger">{{budget.category}}</span></dd>
   
     <dt class="col-sm-3">Income</dt>
-    <dd class="col-sm-9">{{issue.income}}</dd>
+    <dd class="col-sm-9">{{budget.income}}</dd>
   
     <dt class="col-sm-3">Outcome</dt>
-    <dd class="col-sm-9">{{issue.outcome}}</dd>
+    <dd class="col-sm-9">{{budget.outcome}}</dd>
 
     <dt class="col-sm-3">Date</dt>
     <dd class="col-sm-9">2019.01.01.</dd>
@@ -26,7 +26,7 @@
   </dl>
   
   <p>
-    <a class="btn btn-primary" [routerLink]="['/budgets',issue.id,'edit']" role="button">Edit</a>
+    <a class="btn btn-primary" [routerLink]="['/budgets',budget.id,'edit']" role="button">Edit</a>
     <button class="btn btn-outline-danger" role="button" (click)="handleDelete()">Delete</button>
   </p>
   </div>

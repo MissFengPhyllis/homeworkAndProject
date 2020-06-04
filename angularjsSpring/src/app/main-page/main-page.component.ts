@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Issue } from '../issue';
-import {IssueService} from '../issue.service';
+import { Budget } from '../budget';
+import {BudgetService} from '../budget.service';
 
 @Component({
   selector: 'app-main-page',
@@ -9,19 +9,19 @@ import {IssueService} from '../issue.service';
 })
 export class MainPageComponent implements OnInit {
   title = 'Family Budget Application';
-  issues: Issue[] = [];
-  constructor(private issueService: IssueService) { }
+  budgets: Budget[] = [];
+  constructor(private budgetService: BudgetService) { }
   totalInCome = 0;
   totalOutCome = 0;
   async ngOnInit(){
-    this.issues = await this.issueService.getIssues();
-    this.issues.forEach(issue => {
-     this.totalInCome += issue.income;
-     this.totalOutCome += issue.outcome;
+    this.budgets = await this.budgetService.getBudgets();
+    this.budgets.forEach(budget => {
+     this.totalInCome += budget.income;
+     this.totalOutCome += budget.outcome;
      
    });
    console.log(this.totalInCome,this.totalOutCome);
-    console.log(this.issues)
+    console.log(this.budgets)
   }
 
 }

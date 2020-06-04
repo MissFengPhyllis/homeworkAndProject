@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IssueListComponent } from './issue-list.component';
+import { BudgetEditComponent } from './budget-edit.component';
 
-describe('IssueListComponent', () => {
-  let component: IssueListComponent;
-  let fixture: ComponentFixture<IssueListComponent>;
+describe('BudgetEditComponent', () => {
+  let component: BudgetEditComponent;
+  let fixture: ComponentFixture<BudgetEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IssueListComponent ]
+      declarations: [ BudgetEditComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IssueListComponent);
+    fixture = TestBed.createComponent(BudgetEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
